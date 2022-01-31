@@ -1,0 +1,92 @@
+<h1>SDLC</h1>
+<p>Software Development Life Cycle</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Accordion</h2>
+<p>Click on the buttons to open the collapsible content.</p>
+
+<button class="accordion">Requirement and Planning analysis</button>
+<div class="panel">
+  <p>Requirements analysis and planning are the keys to the success of an implementation. At this stage, you should set up a management team to define the costs and benefits of the project, select a project team, and set out the detailed stages that will have to be carried out.</p>
+</div>
+
+<button class="accordion">Defining requirements</button>
+<div class="panel">
+  <p>Defining requirements creates the foundation of a successful business intelligence (BI) solution by documenting what will be built. The categories of requirements are: business, data and data quality, functional, regulatory and compliance, and technical.</p>
+</div>
+
+<button class="accordion">Designing and Product Architecture</button>
+<div class="panel">
+  <p>This phase of the SDLC starts by turning the software specifications into a design plan called the Design Specification. All stakeholders then review this plan and offer feedback and suggestions. It’s crucial to have a plan for collecting and incorporating stakeholder input into this document. Failure at this stage will almost certainly result in cost overruns at best and the total collapse of the project at worst.</p>
+</div>
+<button class="accordion">Developing the product</button>
+<div class="panel">
+  <p>At this stage, the actual development starts. It’s important that every developer sticks to the agreed blueprint. Also, make sure you have proper guidelines in place about the code style and practices.
+
+For example, define a nomenclature for files or define a variable naming style such as camelCase. This will help your team to produce organized and consistent code that is easier to understand but also to test during the next phase.</p>
+</div>
+<button class="accordion">Testing The Product</button>
+<div class="panel">
+  <p>The code is tested at various levels in software testing. Unit, system, and user acceptance testings are often performed. This is a grey area as many different opinions exist as to what the stages of testing are and how much, if any iteration occurs. Iteration is not generally part of the waterfall model, but the means to rectify defects and validate fixes prior to deployment is incorporated into this phase. </p>
+</div>
+  <button class="accordion">Deployment</button>
+<div class="panel">
+  <p>In the deployment phase, the application is made available to users. Many companies prefer to automate the deployment phase. This can be as simple as a payment portal and download link on the company website. It could also be downloading an application on a smartphone.
+
+Deployment can also be complex. Upgrading a company-wide database to a newly-developed application is one example. Because there are several other systems used by the database, integrating the upgrade can take more time and effort.</p>
+</div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+  </head>
+</body>
+</html>
